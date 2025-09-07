@@ -1,14 +1,10 @@
 # QR Code - N3XT_L3V3L
-
-## Descripcion
-
 Se le proporciona un código QR. Encuentra la bandera.
 
 > Formato de bandera: n3xt{}
 > Archivo dado: `image.jpg`
 
 ## Solucion
-
 Tenemos un codigo **QR**
 
 ![[Pasted image 20250825190913.png]]
@@ -18,7 +14,6 @@ Una forma de encontrar la flag seria *parsear* el codigo, ya sea que nos de la f
 ![[Pasted image 20250825191538.png]]
 
 Es una *fake flag*, por lo que leyendo el codigo directamente no encontraremos la flag, podriamos intentar buscar informacion o archivos ocultos en la imagen, hay muchas herramientas, pero una bastante buena para extraer informacion y archivos ocultos es **stegseek**
-
 - `stegseek image.jpg`
 
 La siguiente informacion fue encontrada:
@@ -30,7 +25,6 @@ La siguiente informacion fue encontrada:
 ```
 
 Un nuevo archivo fue generado, a partir de un archivo llamado `flag.dat`que se encuentra en esta imagen, al leer el contenido: `P2JJRUxmOWBkMGBkMD9fZjBkXzBiY2RKTg==` podemos ver una cadena en **base64**
-
 - `echo 'P2JJRUxmOWBkMGBkMD9fZjBkXzBiY2RKTg==' | base64 -d
 
 El testo decodificado: ```?bIELf9`d0`d0?_f0d_0bcdJN``` no parece ser la flag, por lo que podriamos estar tratando con una especie de *encriptacion*, *codificacion* o *cifrado* previo a obtener la flag, tiene un aspecto poco comun, por lo que usaremos herramientas para detectar el tipo de cifrado: [Dcode Cipher Identifier](https://www.dcode.fr/cipher-identifier)

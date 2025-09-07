@@ -1,16 +1,12 @@
 # La profesora en apuros - Hackrocks
-
-## Descripcion
-
 Un conocido grupo de ransomware, **R7g6B54**, ha cifrado el ordenador de tu profesora. Sin embargo, parece que este grupo no es tan hábil como aparenta. Hace poco, intentaron atacar al equipo de un renombrado criptógrafo, pero este logró descifrar sus archivos y recuperar la clave en tan solo 15 minutos. El problema es que el criptógrafo, aunque mencionó su logro en su blog, no explicó los detalles técnicos de cómo lo logró. Ahora, todo lo que tienes para trabajar es:
-
 - Una **Captura del mensaje de rescate** del grupo
 - El nombre del grupo: **R7g6B54**
 
-> ¿Serás capaz de encontrar la clave y liberar los archivos de tu profesora? ¡El tiempo corre!
+> ¿Serás capaz de encontrar la clave y liberar los archivos de tu profesora?
+> ¡El tiempo corre!
 
 ## Solucion
-
 ![[Pasted image 20250824220258.png]]
 
 > Archivos dados: `ransomware.png` y `Mensaje_con_flag.pdf.DBK`
@@ -44,8 +40,7 @@ Tenemos una clave, el otro archivo *DBK* no posee archivos embedidos asi que el 
 
 Dado que solo tenemos la **key** y no el **iv**, podriamos usar el modo *CBC* de AES, pero dado que tenemos un archivo pdf, no podemos usar herramientas en linea, debemos crear un script en python
 
-## Solution code
-
+## Codigo completo
 ```
 from Crypto.Cipher import AES
 

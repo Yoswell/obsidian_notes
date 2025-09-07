@@ -1,21 +1,16 @@
-# History
-
-## Descripcion
-
+# History - N3XT_L3V3L
 En lo más profundo de la base de datos del historial del navegador se esconde un secreto. Sólo aquellos que examinen cuidadosamente las marcas de tiempo, las URL y las entradas ocultas descubrirán la bandera. Profundiza: la respuesta espera a los persistentes
 
 > Archivo dado: `history.db`
 
 ## Solucion
-
 Lo mas importante es determinar el tipo de **base de datos**: `file history.sb`, esto nos dira que tipo de base de datos es para asi proceder con el analisis
 
 ```
 history.db: SQLite 3.x database...
 ```
 
-Para las bases de datos *SQLite3* existe una herramienta muy cool para evitar usar la terminal, se llama **SQLite Browser**, la cual podemos instalar en kali o descargar el `.AppImage`
-
+Para las bases de datos *SQLite3* existe una herramienta muy cool para evitar usar la terminal, se llama **SQLite Browser**, la cual podemos instalar en kali o descargar 
 - `sudo apt install sqlitebrowser`
 - [Download SQLite Browser](https://sqlitebrowser.org/dl/)
 
@@ -32,7 +27,6 @@ SELECT * FROM urls WHERE url LIKE '%bjN4%'
 ```
 
 Dado que es **base64** con un simple `echo` podemos decodificarlo:
-
 - `echo 'bjN4dHtkNHQ0XzBjMzRuX2QxdjNyX200c3Qzcn0=' | base64 -d`
 
 > La flag es: `n3xt{d4t4_0c34n_d1v3r_m4st3r}`

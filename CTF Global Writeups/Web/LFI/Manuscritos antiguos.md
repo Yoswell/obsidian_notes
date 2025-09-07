@@ -1,13 +1,9 @@
-# Manuscritos antiguos
-
-## Descripcion
-
+# Manuscritos antiguos - N3XT_L3V3L
 En este sitio se esconde un archivo secreto llamado `flag.txt`. Solo un reconocimiento minucioso te llevará al premio
 
 > Dominio dado: https://dspool9.ctf.n3xtl3v3l.site/
 
 ## Solucion
-
 Al ingresar al sitio web podemos ver lo siguiente:
 
 ![[Pasted image 20250826201011.png]]
@@ -39,13 +35,11 @@ Si podemos consultar archivos desde la url, podriamos intentar buscar la flag o 
 ![[Pasted image 20250826201903.png]]
 
 Al leer el primer archivo podemos ver que en el servidor hay un archivo `app.py` que se esta ejecutando, lo mas probable un archivo hecho con **flask** 
-
 - `https://dspool9.ctf.n3xtl3v3l.site/archive?page=/app.py`
 
 ![[Pasted image 20250826202058.png]]
 
 Logramos leer el contenido de ese archivo el cual nos revela un directorio llamado **secrets**, en donde por intuicion suponemos que esta la flag
-
 - `https://dspool9.ctf.n3xtl3v3l.site/archive?page=/../.secret/flag.txt`
 
 Al ejecutar intentar leer la flag dentro de ese directorio obtenemos lo siguiente:

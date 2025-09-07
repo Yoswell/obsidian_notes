@@ -1,7 +1,4 @@
-# Malicious IP
-
-## Descripcion
-
+# Malicious IP - N3XT_L3V3L
 Se le proporciona un gran registro de acceso HTTP que contiene 75.000 entradas de un servicio API crítico. El registro incluye solicitudes de usuarios normales, bots ruidosos y un actor malicioso que realiza una secuencia de llamadas API sospechosas.
 
 Su tarea es analizar el registro y encontrar la dirección IP responsable de la actividad maliciosa. El comportamiento del atacante sigue un patrón único e identificable de llamadas API integradas en los registros.
@@ -10,7 +7,6 @@ Su tarea es analizar el registro y encontrar la dirección IP responsable de la 
 > Archivo dado: `critical_api_access.log`
 
 ## Solucion
-
 Tenemos un archivolog y debemos encontrar la **IP**, en la descripcion podemos ver que de primeras nos estan diciendo que la ip maliciosa esa haciendo llamadas a la *API*. El archivo tiene el siguiente contenido
 
 ```

@@ -1,11 +1,7 @@
 # NextGen - N3XT_L3V3L
-
-## Descripcion
-
 > Dominio dado: https://fxc99.ctf.n3xtl3v3l.site/
 
 ## Solucion
-
 Al momento de entrar al sitio web podemos ver un input que nos solicita ingresar nuestro nombre o un payload, ingresare mi nickname: **Vishok** para ver su respuesta
 
 ![[Pasted image 20250826193027.png]]
@@ -33,7 +29,6 @@ const WAF_BLACKLIST = [
 ```
 
 Dentro del Js de la web nos dejaron una pista, todas las palabras que el WAF detecta en nuestras request, dado que no podemos usar `join`, o **concatenacion**, debemos buscar otra forma, que que estos metodos no son las funciones como tal, son solo **strings**, los cuales no sirven
-
 - `{{''.join(['s','e','l','f'])}}
 - `{{''.join(['o','s'])}}`
 
@@ -52,7 +47,6 @@ Por tanto
 ![[Pasted image 20250826195619.png]]
 
 Usando este payload podemos ejecutar comandos en el servidor, pero primero debemos encontrar donde esta la flag para despues leer su contenido, por lo que ocupamos codificar a hexadecimal los comandos `ls` y `cat flag.txt`
-
 - `6c 73` = `ls` 
 - `0a 63 61 74 20 66 6c 61 67 2e 74 78 74` = `cat flag.txt`
 
@@ -61,7 +55,6 @@ Primero buscaremos donde esta la flag
 ![[Pasted image 20250826200052.png]]
 
 Lo unico que debemos hacer es sustituir el payload por el nuevo y listo, la flag esta en la misma ruta que estamos, asi que solo debemos usar el comando anterior sin modificaciones
-
 - `echo '63 61 74 20 66 6c 61 67 2e 74 78 74' | sed -e 's/ /\\x/g'`
 
 ![[Pasted image 20250826200626.png]]
